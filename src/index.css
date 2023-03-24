@@ -6,3 +6,22 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+html{
+  scroll-behavior: smooth;
+  scroll-padding-top: 10vh;
+}
+
+*::-webkit-scrollbar {
+  width: 20px;               /* width of the entire scrollbar */
+}
+
+*::-webkit-scrollbar-track {
+  background: #28282e;        /* color of the tracking area */
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #1d1d25;    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+  border: 3px solid #28282e;   /* creates padding around scroll thumb */
+}

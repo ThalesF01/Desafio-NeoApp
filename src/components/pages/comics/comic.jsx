@@ -17,6 +17,34 @@ const {id} =useParams()
 
 const [comic, setComic] = useState()
 
+const [contador, setContador] = useState(1);
+
+const [total, setTotal] = useState(0);
+
+function aumentarContador(price) {
+  setContador(contador + 1);   
+  setTotal(price *contador)
+  console.log(`Aqui contador ${contador}`)
+  console.log(`Aqui ${price}`)
+  
+  
+}
+
+function diminuirContador(price) {    
+  if(total > 1) {
+    setContador(contador-1)
+  setTotal(total - price)
+  console.log(`Aqui contador1 ${contador}`)
+  console.log(`Aqui1 ${price}`)
+  }
+}
+
+function cleanCart(){
+  setTotal([])
+  setContador(1)
+}
+
+
 useEffect(()=>{
   axios.get(`https://gateway.marvel.com:443/v1/public/comics/${id}?ts=${time}&apikey=${publicKey}&hash=${hash}`)
  .then(response =>{
@@ -37,11 +65,13 @@ useEffect(()=>{
                   <Article>
                     <Title>Title: {comic.title}</Title>
                     <p>Description: {(!comic.description)?"Comic without description...":(comic.description)}</p>
-                    <p>Price: ${comic.prices[0].price}</p>
+                    <p>Unity price: {(!comic.prices[0].price)?"Comic without price...": (comic.prices[0].price)}</p>
+                    
                       <Cart>
-                        <button>Add to Cart</button>
-                        <button>Remove from Cart</button>
-                      </Cart>                  
+                        <button onClick={()=> aumentarContador(comic.prices[0].price)}>Add to Cart : {contador-1}</button>
+                        <button onClick={()=> diminuirContador(comic.prices[0].price)}>Remove from Cart</button>                        
+                      </Cart>                                                                        
+                        <p>Total price: $ {total.toFixed(2)}</p>
                     </Article>
                 </ContainerView>
               )

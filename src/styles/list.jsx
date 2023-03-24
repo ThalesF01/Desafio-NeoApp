@@ -8,6 +8,7 @@ export const Div = styled.div`
     align-items: center;
     justify-content: center;
     width: 100%;
+    
 `
 export const Title = styled.h1`
     margin-top: 15px;
@@ -20,23 +21,12 @@ export const Container = styled.div`
     align-items: center;
     justify-content: center;
     transition: all 0.3s;
-    & img{
+    width: 100%;
+    @media (max-width: 1000px) {
         display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 280px;
-        height: 330px;
-        border-radius: 8px;
-        margin: 15px;
-        transition: all 0.3s;
-        
+        flex-direction: column;
     }
-    & img:hover{
-        cursor: pointer;
-        -moz-transform: scale(1.5);
-        -webkit-transform: scale(1.5);
-        transform: scale(1.05);
-    }
+    
 `
 
 export const ContainerHq = styled.div`
@@ -45,10 +35,17 @@ export const ContainerHq = styled.div`
     align-items: center;
     justify-content: center;
     background-color: #303038d6;
-    width: 60vh;
+    width: 90%;
     margin: 15px;
     height: 80vh;  
     border-radius:15px; 
+    @media (max-width: 1000px) {
+        display: flex;
+        flex-direction: column;        
+        width: 65%;
+        height: 70vh;       
+    }
+
     & h2{
         display: flex;
         align-items: center;
@@ -59,5 +56,31 @@ export const ContainerHq = styled.div`
     & p {
         margin: 5px;
         font-size: 1.1rem;
+    }
+`
+
+export const Img = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    height: 65%;
+    width: 100%;
+    & img{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 65%;
+        height: 88%;
+        border-radius: 8px;
+        margin: 15px;
+        transition: all 0.3s;
+        
+    }
+    & img:hover{
+        cursor: pointer;
+        -moz-transform: scale(1.5);
+        -webkit-transform: scale(1.5);
+        transform: scale(1.05);
     }
 `

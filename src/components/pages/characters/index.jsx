@@ -25,7 +25,7 @@ const Characters = () =>{
             <Header/>     
                 <Div>
                     <Title>Characters</Title>
-                        <ul>
+                        
                             <Container>
                                 {characters.map(characters =>{
                                     return(
@@ -39,7 +39,7 @@ const Characters = () =>{
                                         )
                                     })}
                             </Container> 
-                        </ul>
+                        
                 </Div>            
         </>
     )    

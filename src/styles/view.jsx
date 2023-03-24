@@ -21,19 +21,30 @@ export const ContainerView = styled.div`
     transition: all 0.3s;
     margin: 20px;
     height: 100%;
+    align-items: center;
+    justify-content: center;
+    @media (max-width: 1000px) {
+        flex-direction: column;
+        margin-top: 30px;
+    }
 `
 
 export const Img = styled.div`
-    width: 50%;
+    width: 80%;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: all 0.3s;
+    transition: all 0.3s;    
     & img{
-        width: 70%;
-        height: 70vh;
+        width: 85%;
+        height: 85%;
         border-radius: 10px;
-    }& img:hover{        
+    }
+    @media (max-width: 1000px) {
+     
+    }        
+    & img:hover{        
         transform: scale(1.05);
         transition: all 0.3s;
     }
