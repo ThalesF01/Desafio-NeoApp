@@ -2,9 +2,9 @@ import React from 'react';
 import Main from './components/main';
 import Characters from './components/pages/characters';
 import Comics from './components/pages/comics'
-import { Routes, Route } from 'react-router-dom'
 import { Comic } from './components/pages/comics/comic';
 import { Character } from './components/pages/characters/character';
+import { Routes, Route } from 'react-router-dom'
 
 function App() {
   return(

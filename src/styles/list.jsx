@@ -61,4 +61,3 @@ export const ContainerHq = styled.div`
         font-size: 1.1rem;
     }
 `
-

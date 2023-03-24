@@ -29,17 +29,14 @@ const Comics = () =>{
                         <Container>         
                             {comics.map(comics =>{  
                                 return(  
-                                    <ContainerHq>                      
-                                    <a >
+                                    <ContainerHq>                                                                            
                                         <h2>{comics.title}</h2>
                                         <img 
                                         key={comics.id} onClick={()=>navigate(`/comics/${comics.id}`)}
                                         src={`${comics.thumbnail.path}.${comics.thumbnail.extension}`} 
-                                        alt={`Foto do ${comics.title}`} />                                                        
-                                        
+                                        alt={`Foto do ${comics.title}`} />                                                                                                
                                         <p>Pages: {(!comics.pageCount)?"No page counts...":(comics.pageCount)}</p>
-                                        <p>Price: $ {(!comics.prices[0].price)?"No price...":(comics.prices[0].price)}</p>
-                                    </a> 
+                                        <p>Price: $ {(!comics.prices[0].price)?"No price...":(comics.prices[0].price)}</p>                                    
                                     </ContainerHq>                                                                     
                                 )                   
                             })}    
