@@ -39,12 +39,15 @@ export const ContainerHq = styled.div`
     margin: 15px;
     height: 80vh;  
     border-radius:15px; 
+    
     @media (max-width: 1000px) {
         display: flex;
         flex-direction: column;        
         width: 80%;
         height: 70vh;  
-             
+        @media (max-height:500px ){                
+        height: 130vh;
+    }
     }
 
     & h2{
