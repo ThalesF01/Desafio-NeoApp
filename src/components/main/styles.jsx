@@ -52,7 +52,7 @@ export const Container = styled.div`
         height: 92vh;
     }
     @media(max-width: 740px) {
-        height: 85vh;
+        height: 115vh;
         justify-content: space-evenly;
         }
 `
@@ -74,10 +74,9 @@ export const Img = styled.div`
             width: 100%;
             height: 55vh;
         }
-        @media(max-width: 740px) {
-            
+        @media(max-width: 740px) {           
             width: 100%;
-            height: 100%;            
+            height: 70%;            
         }
     }
 `

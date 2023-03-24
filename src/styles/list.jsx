@@ -21,7 +21,7 @@ export const Container = styled.div`
     align-items: center;
     justify-content: center;
     transition: all 0.3s;
-    width: 100%;
+    width: 100%;   
     @media (max-width: 1000px) {
         display: flex;
         flex-direction: column;
@@ -42,8 +42,9 @@ export const ContainerHq = styled.div`
     @media (max-width: 1000px) {
         display: flex;
         flex-direction: column;        
-        width: 65%;
-        height: 70vh;       
+        width: 80%;
+        height: 70vh;  
+             
     }
 
     & h2{
@@ -63,15 +64,15 @@ export const Img = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    
+
     height: 65%;
     width: 100%;
     & img{
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 65%;
-        height: 88%;
+        width: 78%;
+        height: 94%;
         border-radius: 8px;
         margin: 15px;
         transition: all 0.3s;

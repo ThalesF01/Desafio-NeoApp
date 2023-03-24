@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react'
-
+import api from '../../../api'
 import Header from '../../main/header'
 import { useNavigate } from 'react-router-dom'
-import { Div, Container, ContainerHq, Title } from '../../../styles/list'
+import { Div, Container, ContainerHq, Title, Img } from '../../../styles/list'
 import axios from 'axios'
-import md5 from 'md5';
+import md5 from 'md5'
 
 const Characters = () =>{
 
@@ -38,10 +38,10 @@ const Characters = () =>{
                                     return(
                                         <ContainerHq>                                
                                             <h2>{characters.name} </h2>
-                                            <img 
+                                            <Img><img 
                                             key={characters.id} onClick={()=>navigate(`/characters/${characters.id}`)}
                                             src={`${characters.thumbnail.path}.${characters.thumbnail.extension}`} 
-                                             alt={`Foto do ${characters.name}`} />                                                                                                
+                                             alt={`Foto do ${characters.name}`} /></Img>
                                         </ContainerHq>
                                         )
                                     })}

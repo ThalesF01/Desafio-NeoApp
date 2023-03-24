@@ -31,19 +31,13 @@ function aumentarContador(price) {
 }
 
 function diminuirContador(price) {    
-  if(total > 1) {
+  if(total > 1)  {
     setContador(contador-1)
   setTotal(total - price)
   console.log(`Aqui contador1 ${contador}`)
   console.log(`Aqui1 ${price}`)
   }
 }
-
-function cleanCart(){
-  setTotal([])
-  setContador(1)
-}
-
 
 useEffect(()=>{
   axios.get(`https://gateway.marvel.com:443/v1/public/comics/${id}?ts=${time}&apikey=${publicKey}&hash=${hash}`)
@@ -60,10 +54,11 @@ useEffect(()=>{
         <Div>        
           {
             (!comic)?"Nothing here...":(
-              <ContainerView>                  
+              <ContainerView>           
+                       
                 <Img><img src={`${comic.thumbnail.path}.${comic.thumbnail.extension}`} alt={`Foto do ${comic.name}`} /></Img>   
-                  <Article>
-                    <Title>Title: {comic.title}</Title>
+                  <Article>  
+                  <Title>Title: {comic.title}</Title>                  
                     <p>Description: {(!comic.description)?"Comic without description...":(comic.description)}</p>
                     <p>Unity price: {(!comic.prices[0].price)?"Comic without price...": (comic.prices[0].price)}</p>
                     

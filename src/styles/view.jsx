@@ -8,8 +8,11 @@ export const Div = styled.div`
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 85vh;
-    transition: all 0.3s;    
+    
+    transition: all 0.3s;
+    @media (min-width: 1000px) {
+        height: 100vh;
+    }
 `
 
 export const ContainerView = styled.div`
@@ -19,31 +22,42 @@ export const ContainerView = styled.div`
     padding: 1rem;
     border-radius: 15px;
     transition: all 0.3s;
-    margin: 20px;
+    margin: 40px;
     height: 100%;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     @media (max-width: 1000px) {
         flex-direction: column;
-        margin-top: 30px;
+        margin-top: 30px; 
+        height: 100%;
     }
 `
 
 export const Img = styled.div`
-    width: 80%;
-    height: 100%;
+    
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: all 0.3s;    
-    & img{
-        width: 85%;
-        height: 85%;
-        border-radius: 10px;
-    }
+    transition: all 0.3s;           
+    height: 100%;
+    width: 90%;
     @media (max-width: 1000px) {
-     
-    }        
+        height: 400px;
+        width: 100%;;
+        
+    }
+
+    & img{
+        border-radius: 10px;
+        height: 500px;
+        width: 70%;
+        
+        @media (max-width: 1000px) {
+            width:85%;
+            height: 90%;
+        }  
+    }          
+
     & img:hover{        
         transform: scale(1.05);
         transition: all 0.3s;
