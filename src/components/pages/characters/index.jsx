@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import api from '../../../services/api'
 import { useNavigate } from 'react-router-dom'
 import Header from '../../main/header'
+import { Div, Container, ContainerHq, Title } from '../../../styles/list'
 //import { Container } from './sytles'
 
 const Characters = () =>{
@@ -22,26 +23,28 @@ const Characters = () =>{
 
     return(
         <>   
-        <Header/>     
-            <h1>Characters</h1>
-            <ul>
-                {characters.map(characters =>{
-                    return(
-                        <li key={characters.id} onClick={()=>navigate(`/characters/${characters.id}`)}>
-                            <img 
-                            src={`${characters.thumbnail.path}.${characters.thumbnail.extension}`} 
-                            alt={`Foto do ${characters.name}`} />
-                            <span className="name">
-                                {characters.name}
-                            </span>
-                            <span className='title'>
-                                {characters.title}
-                            </span>
-                        </li>
-                    )
-                })}
-            </ul>            
-            </>
+            <Header/>     
+                <Div>
+                    <Title>Characters</Title>
+                    <ul>
+                    <Container>
+                        {characters.map(characters =>{
+                            return(
+                                <ContainerHq>
+                                <a >
+                                    <h2>{characters.name} </h2>
+                                    <img 
+                                    key={characters.id} onClick={()=>navigate(`/characters/${characters.id}`)}
+                                    src={`${characters.thumbnail.path}.${characters.thumbnail.extension}`} 
+                                    alt={`Foto do ${characters.name}`} />                                                                
+                                </a>
+                                </ContainerHq>
+                            )
+                        })}
+                        </Container> 
+                    </ul>
+                </Div>            
+        </>
     )
     
 }

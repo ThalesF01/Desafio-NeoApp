@@ -6,13 +6,13 @@ export default function Header(){
 
     let navigate = useNavigate()
 
-    return(        
-        <Nav>
+    return(           
+        <Nav>                                       
             <Ul>
                 <Lista> <Link onClick={()=>navigate(`/`)}> Home </Link> </Lista>
                 <Lista> <Link onClick={()=>navigate(`/comics`)}> Comics </Link> </Lista>
                 <Lista> <Link onClick={()=>navigate(`/characters`)}> Characters </Link> </Lista>
-            </Ul>                    
-        </Nav>                    
+            </Ul>                                                           
+        </Nav>
     )
 }

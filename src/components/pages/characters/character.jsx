@@ -3,6 +3,9 @@ import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import md5 from 'md5';
 import { useNavigate } from 'react-router-dom'
+import Header from '../../main/header'
+import { Div, ContainerView, Img, Title } from '../../../styles/view';
+import { Article } from '../../main/styles';
 
 export const Character = () => {
 
@@ -29,20 +32,22 @@ useEffect(()=>{
 
 
   return (
-    <>
-    <h1>Teste {id}</h1>
-    <h1>Character </h1>
-    <button onClick={()=>navigate(`/characters`)}>Retornar</button>
+    <>  
+    <Header />
+    <Div>
             {
               (!character)?"Nada aqui":(
-                <>
-                    <img src={`${character.thumbnail.path}.${character.thumbnail.extension}`} alt={`Foto do ${character.name}`} />
-                  <p>Nome: {character.name}</p>
-                  <p>Descrição: {(!character.description)?"Personagem sem descrição...":(character.description)}</p>
-                </>
+                <ContainerView>                  
+                  <Img><img src={`${character.thumbnail.path}.${character.thumbnail.extension}`} alt={`Foto do ${character.name}`} /></Img>
+                  <Article>
+                  <Title>Name: {character.name}</Title>
+                  <p>Description: {(!character.description)?"Personagem sem descrição...":(character.description)}</p>
+                  </Article>
+                  </ContainerView>
                 
               )
             }
+            </Div>
             </>        
   );
 }

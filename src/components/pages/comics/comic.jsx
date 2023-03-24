@@ -3,6 +3,10 @@ import axios from 'axios';
 import md5 from 'md5';
 import { useParams } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom'
+import Header from '../../main/header'
+import { Article } from '../../main/styles';
+import { ContainerView, Div, Img, Cart, Title } from '../../../styles/view';
+
 
 export const Comic = () => {
 
@@ -29,19 +33,25 @@ useEffect(()=>{
 
   return (
     <>
-    <h1>Comic </h1>
-    
-    <button onClick={()=>navigate(`/comics`)}>Retornar</button>
+    <Header />
+    <Div>        
             {
               (!comic)?"Nada aqui":(
-                <>
-                    <img src={`${comic.thumbnail.path}.${comic.thumbnail.extension}`} alt={`Foto do ${comic.name}`} />
-                  <p>Titulo: {comic.title}</p>
-                  <p>Descrição: {(!comic.description)?"HQ sem descrição...":(comic.description)}</p>
-                  <p>Preço: ${comic.prices[0].price}</p>
-                </>                
+                <ContainerView>                  
+                  <Img><img src={`${comic.thumbnail.path}.${comic.thumbnail.extension}`} alt={`Foto do ${comic.name}`} /></Img>   
+                  <Article>
+                  <Title>Title: {comic.title}</Title>
+                  <p>Description: {(!comic.description)?"Comic without description...":(comic.description)}</p>
+                  <p>Price: ${comic.prices[0].price}</p>
+                  <Cart>
+                    <button>Add to Cart</button>
+                    <button>Remove from Cart</button>
+                  </Cart>                  
+                  </Article>
+                  </ContainerView>
               )
             }
+            </Div>
             </>        
   );
 }

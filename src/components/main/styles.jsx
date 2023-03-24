@@ -9,15 +9,13 @@ export const Nav = styled.nav`
 `
 
 export const Lista = styled.li`
-    list-style: none;
-    
+    list-style: none;    
     padding: 0.5rem;
 `
 
 export const Ul = styled.ul`
     display: flex;
-    flex-direction: row;
-    
+    flex-direction: row;    
     align-items: center;
     justify-content: space-around;
     width: 50%;
@@ -36,8 +34,53 @@ export const Link = styled.a`
         letter-spacing: 1.5px;
         border-radius: 15px;
         transform: scale(1.1);
-        background-color: #393941;
-        color: #fafafa; 
+        background-color: #393941;         
     }
-
 `
+
+export const Container = styled.div`
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 85vh;
+    background-color: #1e1e23;
+    
+`
+
+export const Img = styled.div`
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    & img{
+        width: 75%;
+        height: 75vh;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+`
+
+export const Article = styled.article`
+    width: 50%;    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+
+    & p{
+        color: #fafafa;
+        letter-spacing: 0.7px;
+        line-height: 1.5;
+        font-size: 1.2rem;
+        
+        margin: 1rem;
+    }
+`
+
+export const Title = styled.h1`
+    color: #b60202;
+    font-size: 3.5rem;
+    font-weight: 900;
+    font-family: sans-serif;
+` 
