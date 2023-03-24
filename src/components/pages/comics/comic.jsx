@@ -24,19 +24,37 @@ const [total, setTotal] = useState(0);
 function aumentarContador(price) {
   setContador(contador + 1);   
   setTotal(price *contador)
-  console.log(`Aqui contador ${contador}`)
-  console.log(`Aqui ${price}`)
+  //console.log(`Aqui contador ${contador}`)
+  //console.log(`Aqui ${price}`)
   
   
 }
 
-function diminuirContador(price) {    
-  if(total > 1)  {
-    setContador(contador-1)
-  setTotal(total - price)
-  console.log(`Aqui contador1 ${contador}`)
-  console.log(`Aqui1 ${price}`)
-  }
+function diminuirContador(price) {  
+    if(!price)
+    {
+
+      console.log(`Nada ${contador}`)
+
+      if(contador > 1)
+        {
+          setContador(contador-1)
+          setTotal(total - price)
+          console.log(`Aqui contador1 ${contador}`)
+          //console.log(`Aqui1 ${price}`)
+        }
+
+    }else{
+      if(total > 1)
+        {
+          setContador(contador-1)
+          setTotal(total - price)
+          console.log(`Aqui contador1 ${contador}`)
+          //console.log(`Aqui1 ${price}`)
+        }
+    }
+
+  
 }
 
 useEffect(()=>{
@@ -54,14 +72,12 @@ useEffect(()=>{
         <Div>        
           {
             (!comic)?"Nothing here...":(
-              <ContainerView>           
-                       
+              <ContainerView>                                  
                 <Img><img src={`${comic.thumbnail.path}.${comic.thumbnail.extension}`} alt={`Foto do ${comic.name}`} /></Img>   
                   <Article>  
                   <Title>Title: {comic.title}</Title>                  
                     <p>Description: {(!comic.description)?"Comic without description...":(comic.description)}</p>
-                    <p>Unity price: {(!comic.prices[0].price)?"Comic without price...": (comic.prices[0].price)}</p>
-                    
+                    <p>Unity price: {(!comic.prices[0].price)?"Comic without price...": (comic.prices[0].price)}</p>                    
                       <Cart>
                         <button onClick={()=> aumentarContador(comic.prices[0].price)}>Add to Cart : {contador-1}</button>
                         <button onClick={()=> diminuirContador(comic.prices[0].price)}>Remove from Cart</button>                        

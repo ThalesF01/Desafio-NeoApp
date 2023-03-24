@@ -36,7 +36,7 @@ useEffect(()=>{
               <Img><img src={`${character.thumbnail.path}.${character.thumbnail.extension}`} alt={`Foto do ${character.name}`} /></Img>
                 <Article>
                   <Title>Name: {character.name}</Title>
-                  <p>Description: {(!character.description)?"Personagem sem descrição...":(character.description)}</p>
+                  <p>Description: {(!character.description)?"Character withou description...":(character.description)}</p>
                 </Article>
             </ContainerView>                
           )
