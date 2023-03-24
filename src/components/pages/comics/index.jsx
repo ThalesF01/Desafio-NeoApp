@@ -3,14 +3,15 @@ import api from '../../../services/api'
 import Header from '../../main/header'
 import { useNavigate } from 'react-router-dom'
 import {  Div, Container, ContainerHq, Title, Img } from '../../../styles/list';
+import axios from 'axios';
 
 const Comics = () =>{
 
     const [comics, setComics] = useState([])   
 
     useEffect(()=>{
-        api
-        .get('/comics')
+        axios
+        .get('https://gateway.marvel.com/v1/public/comics')
         .then(response =>{
             console.log(response.data.data.results)
             setComics(response.data.data.results)           

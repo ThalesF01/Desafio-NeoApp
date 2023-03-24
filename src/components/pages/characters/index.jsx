@@ -3,14 +3,15 @@ import api from '../../../services/api'
 import Header from '../../main/header'
 import { useNavigate } from 'react-router-dom'
 import { Div, Container, ContainerHq, Title } from '../../../styles/list'
+import axios from 'axios'
 
 const Characters = () =>{
 
     const [characters, setCharacters] = useState([])   
     
     useEffect(()=>{
-        api
-        .get('/characters')
+        axios
+        .get('https://gateway.marvel.com/v1/public/characters')
         .then(response =>{
             //console.log(response.data.data.results)
             setCharacters(response.data.data.results)            
