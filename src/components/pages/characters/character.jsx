@@ -37,8 +37,8 @@ useEffect(()=>{
               (!character)?"Nada aqui":(
                 <>
                     <img src={`${character.thumbnail.path}.${character.thumbnail.extension}`} alt={`Foto do ${character.name}`} />
-                  <p>Nome da personagem: {character.name}</p>
-                  <p>Descrição do personagem: {(!character.description)?"Personagem sem descrição":(character.description)}</p>
+                  <p>Nome: {character.name}</p>
+                  <p>Descrição: {(!character.description)?"Personagem sem descrição...":(character.description)}</p>
                 </>
                 
               )

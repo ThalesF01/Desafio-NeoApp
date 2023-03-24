@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import api from '../../../services/api'
 import { useNavigate } from 'react-router-dom'
+import Header from '../../main/header'
 //import { Container } from './sytles'
 
 const Characters = () =>{
@@ -20,7 +21,8 @@ const Characters = () =>{
     let navigate = useNavigate()
 
     return(
-        <>        
+        <>   
+        <Header/>     
             <h1>Characters</h1>
             <ul>
                 {characters.map(characters =>{

@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import api from '../../../services/api'
-import { useNavigate } from 'react-router-dom'
 import Header from '../../main/header'
-
+import { useNavigate } from 'react-router-dom'
 //import { Container } from './sytles'
 
 const Comics = () =>{
+
     const [comics, setComics] = useState([])   
-    
+
     useEffect(()=>{
         api
         .get('/comics')
@@ -20,31 +20,32 @@ const Comics = () =>{
     }, [])
 
     let navigate = useNavigate()
-
+    
     return(
         <>   
         <Header />     
             <h1>Comics</h1>
-            <ul>
-                {comics.map(comics =>{
+            <ul>                
+                {comics.map(comics =>{  
                     return(
+                        <>
                         <li key={comics.id} onClick={()=>navigate(`/comics/${comics.id}`)}>
                             <img 
                             src={`${comics.thumbnail.path}.${comics.thumbnail.extension}`} 
-                            alt={`Foto do ${comics.name}`} />
+                            alt={`Foto do ${comics.title}`} />
                             <span className="name">
                                 {comics.name}
                             </span>
                             <span className='title'>
                                 {comics.title}
-                            </span>
-                        </li>
+                            </span>                            
+                        </li>                       
+                        </>                        
                     )
-                })}
+                })}                               
             </ul>            
             </>
-    )
-    
+    )    
 }
 
 export default Comics

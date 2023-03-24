@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { useParams } from 'react-router-dom';
 import md5 from 'md5';
+import { useParams } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom'
 
 export const Comic = () => {
@@ -22,7 +22,6 @@ useEffect(()=>{
  .then(response =>{
       console.log(response.data.data.results)
       setComic(response.data.data.results[0])
-     // console.log('Segundo log', item)
   }) 
   .catch(err => console.log(err))
 }, [0])
@@ -30,19 +29,17 @@ useEffect(()=>{
 
   return (
     <>
-    <h1>Teste {id}</h1>
     <h1>Comic </h1>
+    
     <button onClick={()=>navigate(`/comics`)}>Retornar</button>
             {
               (!comic)?"Nada aqui":(
                 <>
                     <img src={`${comic.thumbnail.path}.${comic.thumbnail.extension}`} alt={`Foto do ${comic.name}`} />
-                  <p>Nome da HQ: {comic.title}</p>
-                  <p>Descrição da HQ: {comic.description}</p>
-                  <p>Preço da HQ: {comic.price}</p>
-                  <p>personagens da HQ: {`${comic.available}.${comic.collectionURI}`}</p>
-                </>
-                
+                  <p>Titulo: {comic.title}</p>
+                  <p>Descrição: {(!comic.description)?"HQ sem descrição...":(comic.description)}</p>
+                  <p>Preço: ${comic.prices[0].price}</p>
+                </>                
               )
             }
             </>        
