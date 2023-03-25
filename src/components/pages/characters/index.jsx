@@ -17,7 +17,7 @@ const Characters = () =>{
     
     useEffect(()=>{
         axios
-        .get(`https://gateway.marvel.com/v1/public/characters?ts=${time}&apikey=${publicKey}&hash=${hash}&limit=30`)
+        .get(`https://gateway.marvel.com/v1/public/characters?ts=${time}&apikey=${publicKey}&hash=${hash}&limit=45`)
         .then(response =>{
             //console.log(response.data.data.results)
             setCharacters(response.data.data.results)            
@@ -27,7 +27,7 @@ const Characters = () =>{
 
     let navigate = useNavigate()
 
-    const [itensPerPage, setItensPerPage] = useState(6)
+    const [itensPerPage, setItensPerPage] = useState(9)
     const [currentPage, setCurrentPage] = useState(0)
 
     const page = 5

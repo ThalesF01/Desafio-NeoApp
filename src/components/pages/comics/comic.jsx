@@ -1,12 +1,15 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import axios from 'axios';
 import md5 from 'md5';
 import Header from '../../main/header'
 import { useParams } from 'react-router-dom';
 import { Div, ContainerView, Img, Cart, Title } from '../../../styles/view';
 import { Article } from '../../main/styles';
+import { CartContext } from '../../../contexts/CartContext';
 
 export const Comic = () => {
+
+  const {cart, handleAddItemToCart} = useContext(CartContext)  
 
   const publicKey = 'c35bd6ac7d24ffa9ab6b91748102fc41';
   const privateKey = 'babd4db99c02ee9a5d1bd653484e3c5a6a29da7b';
@@ -52,9 +55,7 @@ function diminuirContador(price) {
           console.log(`Aqui contador1 ${contador}`)
           //console.log(`Aqui1 ${price}`)
         }
-    }
-
-  
+    }  
 }
 
 useEffect(()=>{
@@ -66,6 +67,7 @@ useEffect(()=>{
   .catch(err => console.log(err))
 }, [0])
 
+  
   return (
     <>
       <Header />
@@ -78,6 +80,7 @@ useEffect(()=>{
                   <Title>Title: {comic.title}</Title>                  
                     <p>Description: {(!comic.description)?"Comic without description...":(comic.description)}</p>
                     <p>Unity price: {(!comic.prices[0].price)?"Comic without price...": (comic.prices[0].price)}</p>                    
+                                        
                       <Cart>
                         <button onClick={()=> aumentarContador(comic.prices[0].price)}>Add to Cart : {contador-1}</button>
                         <button onClick={()=> diminuirContador(comic.prices[0].price)}>Remove from Cart</button>                        

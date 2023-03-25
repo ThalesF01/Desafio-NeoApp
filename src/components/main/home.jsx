@@ -13,7 +13,11 @@ export default function Home(){
                     Jack Kirby, and Steve Ditko, and include Spider-Man, the X-Men, the Fantastic Four, and the Avengers. 
                     Marvel has expanded into other forms of media, including movies, television shows, and video games, and 
                     was acquired by Disney in 2009. Marvel has remained a beloved and influential part of popular culture for 
-                    over eight decades.</p>
+                    over eight decades.One of the reasons for Marvel's success is its ability to create complex and relatable 
+                    characters that resonate with audiences. The themes explored in Marvel's stories, such as the struggle between 
+                    good and evil, the importance of teamwork, and the consequences of power, have also contributed to the company's 
+                    enduring appeal. The Marvel Cinematic Universe, a series of interconnected movies based on Marvel's comic book 
+                    characters, has become a cultural phenomenon, breaking box office records and garnering critical acclaim. </p>
             </Article>                                       
         </Container>        
     )

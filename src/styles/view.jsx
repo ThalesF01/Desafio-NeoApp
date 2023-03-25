@@ -33,8 +33,7 @@ export const ContainerView = styled.div`
     }
 `
 
-export const Img = styled.div`
-    
+export const Img = styled.div`    
     display: flex;
     align-items: center;
     justify-content: center;
@@ -50,8 +49,7 @@ export const Img = styled.div`
     & img{
         border-radius: 10px;
         height: 500px;
-        width: 70%;
-        
+        width: 70%;       
         @media (max-width: 1000px) {
             width:85%;
             height: 90%;
@@ -60,7 +58,7 @@ export const Img = styled.div`
 
     & img:hover{        
         transform: scale(1.05);
-        transition: all 0.3s;
+        transition: all 0.3s;       
     }
 `
 
