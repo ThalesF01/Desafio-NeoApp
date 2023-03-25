@@ -90,10 +90,13 @@ export const Pagination = styled.div`
     display: flex;
     flex-direction: row;
     padding: 30px;    
-    width: 50%;
+    width: 100%;
     align-items: center;
-    justify-content: center;
+    justify-content: center;    
     & button{
+        display: flex;
+        align-items: center;
+        justify-content: center;
         margin: 15px;
         width: 10%;
         height: 3rem;
@@ -103,7 +106,12 @@ export const Pagination = styled.div`
         color: white;
         border-color: #393941;
         transition-duration: 0.5s; 
-    transition-timing-function: ease-in-out;
+        transition-timing-function: ease-in-out;
+        @media (max-width:1000px){
+            width: 100%;
+            padding: 15px;
+            margin: 10px;
+        }
     }
     & button:hover{
         cursor: pointer;
