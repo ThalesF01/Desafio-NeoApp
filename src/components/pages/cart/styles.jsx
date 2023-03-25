@@ -64,7 +64,7 @@ export const ContainerHq = styled.div`
     border-radius:15px;
     @media (max-width: 1000px) {
         height:60vh;
-        width: 67%;
+        width: 72%;
     }
     & p{
         font-size: 1.2rem;
@@ -87,7 +87,10 @@ export const Img = styled.div`
         height:90%;
         border-radius: 8px;
         margin: 15px;
-        transition: all 0.3s;        
+        transition: all 0.3s; 
+        @media (max-width: 1000px) {
+        width: 72%;
+    }       
     }
     & img:hover{        
         -moz-transform: scale(1.5);

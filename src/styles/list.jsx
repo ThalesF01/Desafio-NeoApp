@@ -43,7 +43,7 @@ export const ContainerHq = styled.div`
         display: flex;
         flex-direction: column;        
         width: 80%;
-        height: 75vh;  
+        height: 80vh;  
         @media (max-height:500px ){                
         height: 130vh;
         }
