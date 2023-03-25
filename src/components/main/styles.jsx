@@ -44,15 +44,15 @@ export const Container = styled.div`
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 85vh;
+    
     background-color: #1e1e23;
     @media(max-width: 1000px) {
         flex-direction: column;   
         justify-content: space-evenly;     
-        height: 92vh;
+        
     }
     @media(max-width: 740px) {
-        height: 115vh;
+       
         justify-content: space-evenly;
         }
 `
