@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import api from '../../../api'
 import Header from '../../main/header'
 import { useNavigate } from 'react-router-dom'
-import { Div, Container, ContainerHq, Title, Img } from '../../../styles/list'
+import { Div, Container, ContainerHq, Title, Img, Pagination } from '../../../styles/list'
 import axios from 'axios'
 import md5 from 'md5'
 
@@ -17,7 +17,7 @@ const Characters = () =>{
     
     useEffect(()=>{
         axios
-        .get(`https://gateway.marvel.com/v1/public/characters?ts=${time}&apikey=${publicKey}&hash=${hash}`)
+        .get(`https://gateway.marvel.com/v1/public/characters?ts=${time}&apikey=${publicKey}&hash=${hash}&limit=30`)
         .then(response =>{
             //console.log(response.data.data.results)
             setCharacters(response.data.data.results)            
@@ -27,14 +27,23 @@ const Characters = () =>{
 
     let navigate = useNavigate()
 
+    const [itensPerPage, setItensPerPage] = useState(6)
+    const [currentPage, setCurrentPage] = useState(0)
+
+    const page = 5
+    const startIndex = currentPage * itensPerPage
+    const endIndex = startIndex + itensPerPage
+    const currentItens = characters.slice(startIndex, endIndex)
+
     return(
         <>   
             <Header/>     
                 <Div>
+                
                     <Title>Characters</Title>
                         
                             <Container>
-                                {characters.map(characters =>{
+                                {currentItens.map(characters =>{
                                     return(
                                         <ContainerHq>                                
                                             <h2>{characters.name} </h2>
@@ -46,7 +55,13 @@ const Characters = () =>{
                                         )
                                     })}
                             </Container> 
-                        
+                            <Pagination> 
+                    {Array.from(Array(page), (characters, index)=>{
+                        return <button value={index} onClick={(e) => setCurrentPage(Number(e.target.value))}>
+                                    {index+1}
+                                </button>
+                        })}
+                        </Pagination> 
                 </Div>            
         </>
     )    

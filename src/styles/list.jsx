@@ -39,7 +39,6 @@ export const ContainerHq = styled.div`
     margin: 15px;
     height: 80vh;  
     border-radius:15px; 
-    
     @media (max-width: 1000px) {
         display: flex;
         flex-direction: column;        
@@ -47,7 +46,7 @@ export const ContainerHq = styled.div`
         height: 70vh;  
         @media (max-height:500px ){                
         height: 130vh;
-    }
+        }
     }
 
     & h2{
@@ -67,7 +66,6 @@ export const Img = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-
     height: 65%;
     width: 100%;
     & img{
@@ -78,13 +76,38 @@ export const Img = styled.div`
         height: 94%;
         border-radius: 8px;
         margin: 15px;
-        transition: all 0.3s;
-        
+        transition: all 0.3s;        
     }
     & img:hover{
         cursor: pointer;
         -moz-transform: scale(1.5);
         -webkit-transform: scale(1.5);
         transform: scale(1.05);
+    }
+`
+
+export const Pagination = styled.div`
+    display: flex;
+    flex-direction: row;
+    padding: 30px;    
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    & button{
+        margin: 15px;
+        width: 10%;
+        height: 3rem;
+        border-radius: 10px;
+        background-color: transparent;
+        font-size: 1.5rem;
+        color: white;
+        border-color: #393941;
+        transition-duration: 0.5s; 
+    transition-timing-function: ease-in-out;
+    }
+    & button:hover{
+        cursor: pointer;
+        background-color: #393941;        
+        transform: scale(1.2);
     }
 `
