@@ -44,7 +44,7 @@ export const Container = styled.div`
     align-items: center;
     justify-content: center;
     width: 100%;    
-    background-color: #1e1e23;
+    background-color: #1e1e23;    
     @media(min-width: 1000px) {
         height:85vh;
     }   
@@ -53,6 +53,13 @@ export const Container = styled.div`
         justify-content: space-evenly; 
         height:105vh;
     }    
+    @media(max-height: 950px) {
+        height:125vh;
+    }
+    @media (max-height:500px ){                
+        height: 210vh;
+        
+        } 
 `
 
 export const Img = styled.div`
@@ -62,6 +69,7 @@ export const Img = styled.div`
     align-items: center;
     justify-content: center;       
     height: 50%;
+    
     & img{
         width: 80%;
         height: 75vh;
@@ -69,11 +77,11 @@ export const Img = styled.div`
         border-radius: 10px;
             @media(max-width: 1000px) {
             width: 100%;
-            height: 55vh;
+            height: 90%;
         }
         @media(max-width: 740px) {           
-            width: 100%;
-            height: 70%;            
+            width: 95%;
+            height: 95%;            
         }
     }
 `
@@ -84,6 +92,8 @@ export const Article = styled.article`
     flex-direction: column;
     align-items: center;
     justify-content: center;    
+    
+    height: 80%;
     & p{
         color: #fafafa;
         letter-spacing: 0.7px;
