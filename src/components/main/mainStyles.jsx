@@ -52,7 +52,7 @@ export const Container = styled.div`
         height:135vh;
     }        
     @media (max-height:500px ){                
-        height: 210vh;
+        height: 220vh;
         
         } 
 `
