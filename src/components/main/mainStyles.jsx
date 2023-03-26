@@ -44,18 +44,13 @@ export const Container = styled.div`
     align-items: center;
     justify-content: center;
     width: 100%;    
-    background-color: #1e1e23;    
-    @media(min-width: 1000px) {
-        height:85vh;
-    }   
+    background-color: #1e1e23;  
+    height:85vh;   
     @media(max-width: 1000px) {
         flex-direction: column;   
         justify-content: space-evenly; 
-        height:105vh;
-    }    
-    @media(max-height: 950px) {
-        height:125vh;
-    }
+        height:170vh;
+    }        
     @media (max-height:500px ){                
         height: 210vh;
         
