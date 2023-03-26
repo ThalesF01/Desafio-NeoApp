@@ -32,8 +32,6 @@ opacity: 1;
 }   
 `
 
-
-
 export const Container = styled.div`
     display: grid;    
     grid-template-columns: 1fr 1fr 1fr;
@@ -43,13 +41,11 @@ export const Container = styled.div`
      align-items: center;
     transition: all 0.3s;
     width: 100%;   
-    
     padding: 30px;
     @media (max-width: 1000px) {
         display: flex;
         flex-direction: column;
-    }
-    
+    }    
 `
 
 export const ContainerHq = styled.div`
@@ -66,6 +62,10 @@ export const ContainerHq = styled.div`
         height:60vh;
         width: 72%;
     }
+    @media (max-height:780px ){                
+        height: 100vh;
+        width: 50%;
+    }
     & p{
         font-size: 1.2rem;
         padding: 3px;
@@ -77,8 +77,7 @@ export const Img = styled.div`
     align-items: center;
     justify-content: center;
     height: 60%;
-    width: 90%;
-    
+    width: 90%;    
     & img{
         display: flex;
         align-items: center;
@@ -100,8 +99,8 @@ export const Img = styled.div`
 `
 
 export const Remove = styled.div`
-     & button{
-        display: flex;
+    & button{
+    display: flex;
     align-items: center;
     justify-content: center;
     margin: 6px;

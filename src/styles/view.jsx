@@ -7,8 +7,7 @@ export const Div = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    
+    width: 100%;    
     transition: all 0.3s;
     @media (min-width: 1000px) {
         height: 100vh;
@@ -42,10 +41,8 @@ export const Img = styled.div`
     width: 90%;
     @media (max-width: 1000px) {
         height: 400px;
-        width: 100%;;
-        
+        width: 100%;;        
     }
-
     & img{
         border-radius: 10px;
         height: 500px;
@@ -55,7 +52,6 @@ export const Img = styled.div`
             height: 90%;
         }  
     }          
-
     & img:hover{        
         transform: scale(1.05);
         transition: all 0.3s;       

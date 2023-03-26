@@ -1,12 +1,11 @@
-import React, { useEffect, useState, useContext } from 'react'
+import React, { useEffect, useState, } from 'react'
 import Header from '../../main/header'
-import { useNavigate } from 'react-router-dom'
-import {  Div, Container, ContainerHq, Title, Img, Pagination } from '../../../styles/list';
 import axios from 'axios';
 import md5 from 'md5';
-import { CartContext } from '../../../contexts/CartContext';
 import Product from '../cart/product';
 import Cart from '../cart/cart';
+import { useNavigate } from 'react-router-dom'
+import { Div, Container, ContainerHq, Title, Img, Pagination } from '../../../styles/list';
 
 
 

@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import api from '../../../api'
 import Header from '../../main/header'
 import { useNavigate } from 'react-router-dom'
 import { Div, Container, ContainerHq, Title, Img, Pagination } from '../../../styles/list'
@@ -39,9 +38,7 @@ const Characters = () =>{
         <>   
             <Header/>     
                 <Div>
-                
-                    <Title>Characters</Title>
-                        
+                    <Title>Characters</Title>                        
                             <Container>
                                 {currentItens.map(characters =>{
                                     return(

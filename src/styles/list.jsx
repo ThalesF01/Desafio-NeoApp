@@ -25,8 +25,7 @@ export const Container = styled.div`
     @media (max-width: 1000px) {
         display: flex;
         flex-direction: column;
-    }
-    
+    }    
 `
 
 export const ContainerHq = styled.div`
@@ -44,8 +43,9 @@ export const ContainerHq = styled.div`
         flex-direction: column;        
         width: 80%;
         height: 80vh;  
-        @media (max-height:500px ){                
-        height: 130vh;
+        @media (max-height:780px ){                
+        height: 100vh;
+        width: 60%;
         }
     }
 
@@ -76,7 +76,11 @@ export const Img = styled.div`
         height: 94%;
         border-radius: 8px;
         margin: 15px;
-        transition: all 0.3s;        
+        transition: all 0.3s;   
+        @media (max-height:780px ){                
+        width: 65%;
+        height: 85%;
+        }     
     }
     & img:hover{
         cursor: pointer;

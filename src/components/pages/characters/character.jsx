@@ -4,7 +4,7 @@ import md5 from 'md5';
 import Header from '../../main/header'
 import { useParams } from 'react-router-dom';
 import { Div, ContainerView, Img, Title } from '../../../styles/view';
-import { Article } from '../../main/styles';
+import { Article } from '../../main/mainStyles';
 
 export const Character = () => {
 

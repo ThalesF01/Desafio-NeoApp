@@ -43,18 +43,16 @@ export const Container = styled.div`
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    
+    width: 100%;    
     background-color: #1e1e23;
+    @media(min-width: 1000px) {
+        height:85vh;
+    }   
     @media(max-width: 1000px) {
         flex-direction: column;   
-        justify-content: space-evenly;     
-        
-    }
-    @media(max-width: 740px) {
-       
-        justify-content: space-evenly;
-        }
+        justify-content: space-evenly; 
+        height:105vh;
+    }    
 `
 
 export const Img = styled.div`
@@ -64,7 +62,6 @@ export const Img = styled.div`
     align-items: center;
     justify-content: center;       
     height: 50%;
-    
     & img{
         width: 80%;
         height: 75vh;
