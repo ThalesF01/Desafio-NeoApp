@@ -49,7 +49,7 @@ export const Container = styled.div`
     @media(max-width: 1000px) {
         flex-direction: column;   
         justify-content: space-evenly; 
-        height:170vh;
+        height:135vh;
     }        
     @media (max-height:500px ){                
         height: 210vh;
@@ -70,15 +70,22 @@ export const Img = styled.div`
         height: 75vh;
         object-fit: cover;
         border-radius: 10px;
+
             @media(max-width: 1000px) {
             width: 100%;
-            height: 90%;
+            height: 90%;            
         }
         @media(max-width: 740px) {           
-            width: 95%;
-            height: 95%;            
+            width: 90%;
+            height: 90%;     
+                   
         }
     }
+    @media(max-width: 740px) {           
+            width: 80%;
+            height: 20%;     
+                   
+        }
 `
 
 export const Article = styled.article`
