@@ -42,12 +42,12 @@ export const ContainerHq = styled.div`
         display: flex;
         flex-direction: column;        
         width: 80%;
-        height: 80vh;  
-        @media (max-height:780px ){                
-        height: 100vh;
+        height: 100vh;  
+    }
+    @media (max-height:500px ){                
+        height: 105vh;
         width: 60%;
         }
-    }
 
     & h2{
         display: flex;
@@ -66,8 +66,9 @@ export const Img = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 65%;
-    width: 100%;
+    height: 50%;
+    width: 80%;
+    
     & img{
         display: flex;
         align-items: center;
@@ -77,9 +78,9 @@ export const Img = styled.div`
         border-radius: 8px;
         margin: 15px;
         transition: all 0.3s;   
-        @media (max-height:780px ){                
-        width: 65%;
-        height: 85%;
+        @media (max-height:500px ){                
+        width: 62%;
+        height: 97%;
         }     
     }
     & img:hover{

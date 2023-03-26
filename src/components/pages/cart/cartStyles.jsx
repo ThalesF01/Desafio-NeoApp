@@ -18,7 +18,7 @@ button{
         padding: 10px;
         width: 5.5rem;
         height: 2.7rem;
-    }
+    }    
 }
 & button:hover{
 -moz-transform: scale(1.1);
@@ -62,7 +62,7 @@ export const ContainerHq = styled.div`
         height:60vh;
         width: 72%;
     }
-    @media (max-height:780px ){                
+    @media (max-height:500px ){                
         height: 100vh;
         width: 50%;
     }
@@ -117,6 +117,7 @@ export const Remove = styled.div`
         width: 5.5rem;
         height: 2.7rem;
     }
+    
 }
 & button:hover{
 -moz-transform: scale(1.1);
@@ -137,4 +138,5 @@ export const H2 = styled.h2`
     padding: 15px;
     border-radius: 15px;
     margin: 15px;
+    
 `
