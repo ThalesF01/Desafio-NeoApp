@@ -42,7 +42,7 @@ export const ContainerHq = styled.div`
         display: flex;
         flex-direction: column;        
         width: 80%;
-        height: 100vh;  
+        height: 70vh;  
     }
     @media (max-height:500px ){                
         height: 105vh;
@@ -82,6 +82,10 @@ export const Img = styled.div`
         width: 62%;
         height: 97%;
         }     
+        @media (max-width: 1000px) {
+        height: 100%;
+        width: 80%;
+    }
     }
     & img:hover{
         cursor: pointer;
