@@ -110,4 +110,8 @@ E com certeza foi de muito aprendizado, eu consegui colocar todas as minhas habi
 
 Então mesmo que o meu não seja o melhor, eu sei que já valeu muito a pena começar esse projeto, e com certeza trabalharei mais nele, adicionando mais e mais coisas, e deixar ele de portfolio. Serviu tambem pra provar mais uma vez que de fato, programar é o que eu amo, não consigo uma sensação parecida em ficar horas em frente a tela, teclando infinitamente, e depois de horas conseguir solucionar os bugs, deixar a minha aplicação bonita e responsiva, da maneira que eu queria, é de uma felicidade sem igual kk.
 
+<<<<<<< HEAD
 Enfim, é isso. Deixarei o link para produção aqui: https://desafio-neo-app.vercel.app/
+=======
+Enfim, é isso. Deixarei o link para produção aqui: 
+>>>>>>> 62f9596f8f5e1bc4befcd6fa16ca824247cf282b
