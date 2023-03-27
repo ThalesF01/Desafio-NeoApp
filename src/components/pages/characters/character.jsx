@@ -8,10 +8,10 @@ import { Article } from '../../main/mainStyles';
 
 export const Character = () => {
 
-  const publicKey = 'c35bd6ac7d24ffa9ab6b91748102fc41';
-  const privateKey = 'babd4db99c02ee9a5d1bd653484e3c5a6a29da7b';
-  const time = Number(new Date())
-  const hash = md5(time + privateKey + publicKey);
+const publicKey = 'c35bd6ac7d24ffa9ab6b91748102fc41';
+const privateKey = 'babd4db99c02ee9a5d1bd653484e3c5a6a29da7b';
+const time = Number(new Date())
+const hash = md5(time + privateKey + publicKey);
   
 const {id} =useParams()
 
@@ -19,8 +19,7 @@ const [character, setCharacter] = useState()
 
 useEffect(()=>{
   axios.get(`https://gateway.marvel.com:443/v1/public/characters/${id}?ts=${time}&apikey=${publicKey}&hash=${hash}`)
- .then(response =>{
-      //console.log(response.data.data.results)
+ .then(response =>{      
       setCharacter(response.data.data.results[0])     
   }) 
   .catch(err => console.log(err))

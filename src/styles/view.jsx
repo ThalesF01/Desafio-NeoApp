@@ -59,8 +59,7 @@ export const Img = styled.div`
 `
 
 export const Cart = styled.div`
-    display: flex;
-    
+    display: flex;    
     & button{
         margin: 6px;
         text-align: center;

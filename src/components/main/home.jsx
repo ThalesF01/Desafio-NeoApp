@@ -6,8 +6,8 @@ export default function Home(){
     return(        
        <Container>
             <Img><img src={Marvel} alt="err" /></Img> 
-            <Article>
-                <Title>Marvel</Title>     
+            <Article>                      
+                <Title >Marvel</Title>                                                                    
                 <p>Marvel is a comic book company that was founded in 1939 as Timely Publications. 
                     The company's most popular characters were created in the 1960s by writers and artists such as Stan Lee, 
                     Jack Kirby, and Steve Ditko, and include Spider-Man, the X-Men, the Fantastic Four, and the Avengers. 

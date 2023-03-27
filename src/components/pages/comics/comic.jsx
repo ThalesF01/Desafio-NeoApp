@@ -19,8 +19,7 @@ const [comic, setComic] = useState()
 
 useEffect(()=>{
   axios.get(`https://gateway.marvel.com:443/v1/public/comics/${id}?ts=${time}&apikey=${publicKey}&hash=${hash}`)
- .then(response =>{
-      //console.log(response.data.data.results)
+ .then(response =>{     
       setComic(response.data.data.results[0])
   }) 
   .catch(err => console.log(err))

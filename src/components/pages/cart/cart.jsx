@@ -1,6 +1,6 @@
 import React from "react";
 import { Div, Title } from '../../../styles/list'
-import { Container, ContainerHq, Img, Remove, H2 } from "./cartStyles";
+import { Container, ContainerHq, Img, Remove, H2 } from "../../../styles/cartStyles";
 
 function Cart({ cart, onRemoveFromCart }) {
   return (

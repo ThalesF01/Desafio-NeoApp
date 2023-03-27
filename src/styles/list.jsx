@@ -47,8 +47,7 @@ export const ContainerHq = styled.div`
     @media (max-height:500px ){                
         height: 105vh;
         width: 60%;
-        }
-
+    }
     & h2{
         display: flex;
         align-items: center;
@@ -67,8 +66,7 @@ export const Img = styled.div`
     align-items: center;
     justify-content: center;
     height: 50%;
-    width: 80%;
-    
+    width: 80%;    
     & img{
         display: flex;
         align-items: center;
@@ -85,7 +83,7 @@ export const Img = styled.div`
         @media (max-width: 1000px) {
         height: 100%;
         width: 80%;
-    }
+        }
     }
     & img:hover{
         cursor: pointer;

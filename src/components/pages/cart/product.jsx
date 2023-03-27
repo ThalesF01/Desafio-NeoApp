@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Add } from '../cart/cartStyles';
+import { Add } from '../../../styles/cartStyles';
 
 function Product({ product, onAddToCart }) {    
 

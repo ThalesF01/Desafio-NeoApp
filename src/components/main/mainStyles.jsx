@@ -70,7 +70,6 @@ export const Img = styled.div`
         height: 75vh;
         object-fit: cover;
         border-radius: 10px;
-
             @media(max-width: 1000px) {
             width: 100%;
             height: 90%;            

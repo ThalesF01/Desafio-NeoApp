@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState,  } from 'react'
 import Header from '../../main/header'
 import { useNavigate } from 'react-router-dom'
 import { Div, Container, ContainerHq, Title, Img, Pagination } from '../../../styles/list'
@@ -7,32 +7,31 @@ import md5 from 'md5'
 
 const Characters = () =>{
 
-    const publicKey = 'c35bd6ac7d24ffa9ab6b91748102fc41';
-  const privateKey = 'babd4db99c02ee9a5d1bd653484e3c5a6a29da7b';
-  const time = Number(new Date())
-  const hash = md5(time + privateKey + publicKey);
+const publicKey = 'c35bd6ac7d24ffa9ab6b91748102fc41';
+const privateKey = 'babd4db99c02ee9a5d1bd653484e3c5a6a29da7b';
+const time = Number(new Date())
+const hash = md5(time + privateKey + publicKey);
 
-    const [characters, setCharacters] = useState([])   
+const [characters, setCharacters] = useState([])   
     
-    useEffect(()=>{
-        axios
-        .get(`https://gateway.marvel.com/v1/public/characters?ts=${time}&apikey=${publicKey}&hash=${hash}&limit=45`)
-        .then(response =>{
-            //console.log(response.data.data.results)
-            setCharacters(response.data.data.results)            
-        }) 
-        .catch(err => console.log(err))
+useEffect(()=>{
+    axios
+    .get(`https://gateway.marvel.com/v1/public/characters?ts=${time}&apikey=${publicKey}&hash=${hash}&limit=45`)
+    .then(response =>{
+        setCharacters(response.data.data.results)            
+    }) 
+    .catch(err => console.log(err))
     }, [])
 
-    let navigate = useNavigate()
+let navigate = useNavigate()
 
-    const [itensPerPage, setItensPerPage] = useState(9)
-    const [currentPage, setCurrentPage] = useState(0)
+const [itensPerPage, setItensPerPage] = useState(9)
+const [currentPage, setCurrentPage] = useState(0)
 
-    const page = 5
-    const startIndex = currentPage * itensPerPage
-    const endIndex = startIndex + itensPerPage
-    const currentItens = characters.slice(startIndex, endIndex)
+const page = 5
+const startIndex = currentPage * itensPerPage
+const endIndex = startIndex + itensPerPage
+const currentItens = characters.slice(startIndex, endIndex)
 
     return(
         <>   
