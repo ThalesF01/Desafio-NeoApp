@@ -77,6 +77,37 @@ No terceiro dia eu surtei rsrs. Após inserir os dados na tela, criar a pagina d
 Então nesse dia, achei melhor parar por enquanto com a ideia do carrinho e focar em outra coisa só pra não perder o dia, então comecei a fazer a estilização da pagina com styled components. Essa era uma tecnologia que eu nunca havia usado também, mas que me surpreendeu muito de uma forma positiva, eu achei de facil entendimento, e melhora e muito visualmente o codigo, depois de alguns videos assistidos, foi por em prática, e por felicidade, eu peguei rápido o jeito da coisa e consegui estilizar grande parte da apliação e não "perder o dia". 
 
 Os arquivos de estilização estão nomeados de acordo com suas funções nas pastas, mainStyles dentro da pagina *main* em *components* serve para estilizar a pagina home do projeto. A maior parte dos arquivos de estilização estão dentro da pasta *styles*, o *cartStyle*s é referente ao carrinho de compras, *list* é responsavel pela pagina listada, tanto das comics quanto dos characters, e *view* é responsavel pelas paginas de vizualição unica.
-# Desafio front-end NeoApp
-## Available Scripts
-### `npm run build` fails to minify
+
+### - Dia 4:
+
+Quarto dia eu terminei de estilizar todas as paginas, o layout eu me inspirei muito no mesmo que usei para criar meu portfolio, utilizei das mesmas cores, animações, etc. Então foi um processo rapido, depois disso eu comecei a fazer a responsatividade (acho que é assim que escreve rs), essa parte foi um tanto demorado, pois eu estava sendo muito rigido em como eu queria que ficasse, nesse mesmo dia eu subi para produção no vercel e comecei a enviar o link para amigos testarem e procurarem bugs e falhas, e eles acharam varios... Então lá foi eu consertar todos eles.
+
+Essa parte de deixar responsivo demorou um pouco mais do que imaginei, então no final do dia, com o pouco de tempo que tinha me restado, eu aproveitei pra fazer um sistema de paginas numeradas das comics e characters, onde haveriam botões que ao clicar, mudariam os dados na tela referente ao numero da paginda em que estiver. Eu defini na URL da requisição o limit para 30 objetos e o numero de paginas no total como 5, então haveriam 6 itens por paginas, eu pretendia fazer um sistema em que o proprio usuario escolheria o limit de objetos, porém pela falta de tempo, decidi abandonar. Após algumas tentativas falhas, blogs com explicações diversas, e alguns tutorias gringos, eu criei um sistema onde se cria um novo array de objetos cortado, e ao clicar no botão que troca de pagina, ele se atualizaria de acordo com o numero da pagina.
+
+Nesse dia eu tentei fazer o sistema de criação das comics raras geradas aleatoriamentes, eu até consegui criar um array de objetos em que ele criava de forma aleatoria 10% de raros e o resto sendo comuns, mas eu não consegui inseri-las nas comics, e for falta de tempo e sono também (estava de madrugada já), resolvi abandonar a ideia também.
+
+Depois de terminar esse sistema, lá fui eu resolver a questão da responsatividade das paginas e estilização dos botões, adicionando animação e de acordo com o design das paginas.
+
+### - Dia 5:
+
+Dia 5 era um sabado, e o projeto deveria ser entregue até domingo 23:59, então me restavam dois dias para fazer o maximo de atualizações possiveis, porem eu tinha compromissos para o final de semana, em que eu não poderia faltar, então comecei a rushar o projeto e botar prioridade maxima para ele nesses ultimos dias.
+
+Como eu ainda estava revoltado com a situaçao do carrinho de compras, eu decidi usar esse quinto dia inteiro para tentar faze-lo denovo, então lá fui eu tentar achar um jeito, procurando mil videos, blogs, codigos de amigos... tentei usar o sistema de props do propio react junto com useState, tentei aprender e usar o useContext junto com o useState, nesse metodo estava indo bem até, mas eu fiquei preso uma hora e não consegui avançar, então decidi desistir desse modo. E depois de horas, eu cosnegui achar um codigo simples de carrinho de compras, onde eu adaptei ao meu sistema e deu certo.
+
+Então só reutilizei o sistema que havia feito para mostrar a lista das comics e characters com o .map e fui adaptando ao modo que eu queria. Coloquei um useState para calcular o valor final da compra também, não adicionando o valor nulo das comics que não haviam os dados. Eu ainda pretendia colocar botão em que ao clicar, resetaria o valor final da compra e apareceria uma pagina/mensagem agradecendo pela compra. Mas, pela falta de tempo mais uma vez, não consegui adicionar. Depois só deixar responsivo e estava pronto.
+
+### - Dia 6:
+
+E por fim o ultimo dia que eu tinha para enviar o projeto, eu havia planejado deixar esse dia apenas para otimizar o código, deixar organizado e de facil leitura, talvez adicionar algo caso desse tempo, e documentar todo o meu processo de criação aqui no ReadMe.
+
+Porém, como eu havia alguns compromissos nesse dia, não consegui investir tantas horas para o projeto, então acabei não conseguindo adicionar tantas novidades, apenas dei uma limpada no codigo, coloquei alguns comentarios para melhor entendimento, deletei itens desnecessarios para a aplicação, e resolvi pegar todas as minhas anotações desses ultimos dias e fazer esse ReadMe.
+
+## Encerramento
+
+Para encerrar, esse foi um projeto com certeza muito desafiador para mim, de inicio eu estava um tanto aflito, não sabia se iria valer a pena fazer, se iria ficar legal... mas eu não tinha nada a perder, então dei a cara a tapa e fui pra cima.
+
+E com certeza foi de muito aprendizado, eu consegui colocar todas as minhas habilidades em front-end nesse desafio, e colocar um prazo para ainda entregar, fez com que eu desse o meu máximo, na questão de me organizar, fazer o melhor que eu posso em pouco tempo, trabalhar com "pressão", pesquisar diversas fontes, adaptar sempre os codigos com a minha lógica.
+
+Então mesmo que o meu não seja o melhor, eu sei que já valeu muito a pena começar esse projeto, e com certeza trabalharei mais nele, adicionando mais e mais coisas, e deixar ele de portfolio. Serviu tambem pra provar mais uma vez que de fato, programar é o que eu amo, não consigo uma sensação parecida em ficar horas em frente a tela, teclando infinitamente, e depois de horas conseguir solucionar os bugs, deixar a minha aplicação bonita e responsiva, da maneira que eu queria, é de uma felicidade sem igual kk.
+
+Enfim, é isso. Deixarei o link para produção aqui: 
