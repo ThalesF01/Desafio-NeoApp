@@ -25,7 +25,8 @@ export const Container = styled.div`
     @media (max-width: 1000px) {
         display: flex;
         flex-direction: column;
-    }    
+    }  
+    
 `
 
 export const ContainerHq = styled.div`
@@ -45,8 +46,8 @@ export const ContainerHq = styled.div`
         height: 70vh;  
     }
     @media (max-height:500px ){                
-        height: 105vh;
-        width: 60%;
+        height: 100vh;
+        width: 52%;
     }
     & h2{
         display: flex;

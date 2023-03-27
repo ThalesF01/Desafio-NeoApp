@@ -63,8 +63,8 @@ export const ContainerHq = styled.div`
         width: 72%;
     }
     @media (max-height:550px ){                
-        height: 140vh;
-        width: 50%;
+        height: 127vh;
+        width: 49%;
     }
     & p{
         font-size: 1.2rem;
