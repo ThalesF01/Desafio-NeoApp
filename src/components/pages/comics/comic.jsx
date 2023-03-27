@@ -13,7 +13,7 @@ const privateKey = 'babd4db99c02ee9a5d1bd653484e3c5a6a29da7b';
 const time = Number(new Date())
 const hash = md5(time + privateKey + publicKey);
   
-const {id} =useParams()
+const {id} =useParams()   //id do character que foi selecionada
 
 const [comic, setComic] = useState()
 

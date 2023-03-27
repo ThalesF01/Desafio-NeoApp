@@ -46,7 +46,7 @@ export const ContainerHq = styled.div`
         height: 70vh;  
     }
     @media (max-height:500px ){                
-        height: 100vh;
+        height: 115vh;
         width: 52%;
     }
     & h2{

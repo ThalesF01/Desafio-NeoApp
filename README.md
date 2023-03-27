@@ -110,8 +110,14 @@ E com certeza foi de muito aprendizado, eu consegui colocar todas as minhas habi
 
 Então mesmo que o meu não seja o melhor, eu sei que já valeu muito a pena começar esse projeto, e com certeza trabalharei mais nele, adicionando mais e mais coisas, e deixar ele de portfolio. Serviu tambem pra provar mais uma vez que de fato, programar é o que eu amo, não consigo uma sensação parecida em ficar horas em frente a tela, teclando infinitamente, e depois de horas conseguir solucionar os bugs, deixar a minha aplicação bonita e responsiva, da maneira que eu queria, é de uma felicidade sem igual kk.
 
-<<<<<<< HEAD
 Enfim, é isso. Deixarei o link para produção aqui: https://desafio-neo-app.vercel.app/
-=======
-Enfim, é isso. Deixarei o link para produção aqui: 
->>>>>>> 62f9596f8f5e1bc4befcd6fa16ca824247cf282b
+
+## Videos referencia:
+
+- https://www.youtube.com/watch?v=jo-IV8i5Gdk&t=516s video ensinando usar ContextAPI para carrinho de compras
+- https://www.youtube.com/watch?v=2V9VK7xw6XE&t=134s video ensinando carrinho de compras com useState
+- https://www.youtube.com/watch?v=v91BLoapVDw video ensinando criar paginas numeradas
+- https://www.youtube.com/watch?v=WpnCjosdhGs&t=556s Este video me salvou em muitos requisitos, conectar com a API, como personalizar, como estilizar, criar paginas, ideia home. Este vídeo literalmente me salvou
+- https://www.youtube.com/watch?v=Mp1NphMm7YU&t=1671s video ensinando usar styled components
+- https://www.youtube.com/watch?v=83IMoIUoKTk video ensinando inserir dados da API na aplicação
+- https://www.youtube.com/watch?v=jlqgqSFIKPU&t=1608s video ensinando conectar com API da Marvel

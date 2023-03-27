@@ -14,23 +14,23 @@ const privateKey = 'babd4db99c02ee9a5d1bd653484e3c5a6a29da7b';
 const time = Number(new Date())
 const hash = md5(time + privateKey + publicKey);
 
-const [comics, setComics] = useState([])   
+const [comics, setComics] = useState([])
 
     useEffect(()=>{
         axios
         .get(`https://gateway.marvel.com/v1/public/comics?ts=${time}&apikey=${publicKey}&hash=${hash}&limit=30`)
-        .then(response =>{            
-            setComics(response.data.data.results)           
-        }) 
+        .then(response =>{
+            setComics(response.data.data.results)
+        })
         .catch(err => console.log(err))
     }, [])
 
     let navigate = useNavigate()
     
-  const [itensPerPage, setItensPerPage] = useState(6)
-  const [currentPage, setCurrentPage] = useState(0)
+  const [itensPerPage, setItensPerPage] = useState(6)             //itens por pagina
+  const [currentPage, setCurrentPage] = useState(0)               //pagina atual
 
-  const page = 5
+  const page = 5                                                  //total de paginas
   const startIndex = currentPage * itensPerPage
   const endIndex = startIndex + itensPerPage
   const currentItens = comics.slice(startIndex, endIndex)
@@ -57,35 +57,35 @@ const [comics, setComics] = useState([])
     return(
         <>
           <Header />
-            <Div>                        
-              <Title>Comics</Title>                                                                                         
-                <Container>         
+            <Div>
+              <Title>Comics</Title>
+                <Container>
                   {currentItens.map(comics =>{                                                                        
-                    return(                                          
-                      <ContainerHq>                                                                                                                                                                                                            
+                    return(
+                      <ContainerHq>
                         <h2>{comics.title}</h2>
-                        <Img><img 
+                        <Img><img
                         key={comics.id} onClick={()=>navigate(`/comics/${comics.id}`)}
-                        src={`${comics.thumbnail.path}.${comics.thumbnail.extension}`} 
+                        src={`${comics.thumbnail.path}.${comics.thumbnail.extension}`}
                         alt={`Foto do ${comics.title}`} /></Img>
                         <p>Pages: {(!comics.pageCount)?"No page counts...":(comics.pageCount)}</p>
-                        <p>Price: $ {(!comics.prices[0].price)?"No price...":(comics.prices[0].price)}</p>                                            
-                        <Product product={comics} onAddToCart={addToCart} />                                                                           
-                      </ContainerHq>                                                                     
-                      )                   
-                    })}    
-                  </Container>     
-                <Pagination>    
+                        <p>Price: $ {(!comics.prices[0].price)?"No price...":(comics.prices[0].price)}</p>
+                        <Product product={comics} onAddToCart={addToCart} />
+                      </ContainerHq>
+                      )
+                    })}
+                  </Container>
+                <Pagination>
                   {Array.from(Array(page), (comics, index)=>{
                     return <button value={index} onClick={(e) => setCurrentPage(Number(e.target.value))}>
                               {index+1}
                             </button>
                         })}
-                        </Pagination>                   
-                      <Cart cart={cart} onRemoveFromCart={removeFromCart} />                                                        
-            </Div>             
+                        </Pagination>
+                      <Cart cart={cart} onRemoveFromCart={removeFromCart} />
+            </Div>
         </>
-    )    
+    )
 }
 
 export default Comics

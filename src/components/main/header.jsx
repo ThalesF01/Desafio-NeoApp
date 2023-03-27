@@ -4,15 +4,15 @@ import { Nav, Lista, Ul, Link } from "./mainStyles";
 
 export default function Header(){
 
-    let navigate = useNavigate()
+    let navigate = useNavigate() //Rotas
 
-    return(           
-        <Nav>                                       
+    return(
+        <Nav>
             <Ul>
                 <Lista> <Link onClick={()=>navigate(`/`)}> Home </Link> </Lista>
                 <Lista> <Link onClick={()=>navigate(`/comics`)}> Comics </Link> </Lista>
                 <Lista> <Link onClick={()=>navigate(`/characters`)}> Characters </Link> </Lista>
-            </Ul>                                                           
+            </Ul>
         </Nav>
     )
 }
