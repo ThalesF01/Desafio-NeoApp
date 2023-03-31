@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import 'animate.css';
 
 export const Add = styled.div`
 button{
@@ -58,6 +59,8 @@ export const ContainerHq = styled.div`
     height: 73vh;
     width: 78%;
     border-radius:15px;
+    animation: zoomIn; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 1s; /* don't forget to set a duration! */
     @media (max-width: 1000px) {
         height:60vh;
         width: 72%;

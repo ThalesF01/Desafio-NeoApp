@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import 'animate.css';
 
 export const Div = styled.div`
     background-color: #1e1e23;
@@ -39,6 +40,11 @@ export const ContainerHq = styled.div`
     margin: 15px;
     height: 90vh;  
     border-radius:15px; 
+    border-width: 2px;
+    border-style: solid;
+    border-color: ${(props) => props.border === 'raro' ? 'yellow' : '#303038d6'};
+    animation: zoomIn; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 2s; /* don't forget to set a duration! */
     @media (max-width: 1000px) {
         display: flex;
         flex-direction: column;        

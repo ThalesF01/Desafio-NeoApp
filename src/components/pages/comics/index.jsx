@@ -1,33 +1,30 @@
 import React, { useEffect, useState } from 'react'
 import Header from '../../main/header'
 import axios from 'axios';
-import md5 from 'md5';
 import Product from '../cart/product';
 import Cart from '../cart/cart';
 import { useNavigate } from 'react-router-dom'
 import { Div, Container, ContainerHq, Title, Img, Pagination } from '../../../styles/list';
+import { publicKey, time, hash } from '../../../inf/keys';
 
 const Comics = () =>{
-
-const publicKey = 'c35bd6ac7d24ffa9ab6b91748102fc41';
-const privateKey = 'babd4db99c02ee9a5d1bd653484e3c5a6a29da7b';
-const time = Number(new Date())
-const hash = md5(time + privateKey + publicKey);
 
 const [comics, setComics] = useState([])
 
     useEffect(()=>{
         axios
-        .get(`https://gateway.marvel.com/v1/public/comics?ts=${time}&apikey=${publicKey}&hash=${hash}&limit=30`)
+        .get(`https://gateway.marvel.com/v1/public/comics?ts=${time}&apikey=${publicKey}&hash=${hash}&limit=45`)
         .then(response =>{
             setComics(response.data.data.results)
         })
         .catch(err => console.log(err))
     }, [])
 
-    let navigate = useNavigate()
+  let navigate = useNavigate()
     
-  const [itensPerPage, setItensPerPage] = useState(6)             //itens por pagina
+
+  // Pagination  
+  const [itensPerPage, setItensPerPage] = useState(9)             //itens por pagina
   const [currentPage, setCurrentPage] = useState(0)               //pagina atual
 
   const page = 5                                                  //total de paginas
@@ -35,6 +32,8 @@ const [comics, setComics] = useState([])
   const endIndex = startIndex + itensPerPage
   const currentItens = comics.slice(startIndex, endIndex)
 
+  
+  // Cart
   const [cart, setCart] = useState([]);
 
   const addToCart = (product) => {
@@ -53,6 +52,18 @@ const [comics, setComics] = useState([])
   const removeFromCart = (itemToRemove) => {
     setCart(cart.filter((item) => item.id !== itemToRemove.id));
   };
+  
+
+  //Classification
+  const [items, setItems] = useState([]);
+
+   useEffect(() => {
+    const commonItems = Array(8).fill("comum");
+    const rareItems = Array(1).fill("raro");
+
+    const allItems = [...commonItems, ...rareItems].sort(() => Math.random() - 0.5);
+    setItems(allItems);
+  }, []);
 
     return(
         <>
@@ -60,10 +71,11 @@ const [comics, setComics] = useState([])
             <Div>
               <Title>Comics</Title>
                 <Container>
-                  {currentItens.map(comics =>{                                                                        
+                  {currentItens.map((comics, index) =>{                                                                                            
                     return(
-                      <ContainerHq>
+                      <ContainerHq border={items[index]}>
                         <h2>{comics.title}</h2>
+                        <h2>{items[index] == "raro" ? "Rare edition" :"" }</h2>
                         <Img><img
                         key={comics.id} onClick={()=>navigate(`/comics/${comics.id}`)}
                         src={`${comics.thumbnail.path}.${comics.thumbnail.extension}`}

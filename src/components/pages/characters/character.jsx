@@ -1,18 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import md5 from 'md5';
 import Header from '../../main/header'
 import { useParams } from 'react-router-dom';
 import { Div, ContainerView, Img, Title } from '../../../styles/view';
 import { Article } from '../../main/mainStyles';
+import { publicKey, time, hash } from '../../../inf/keys';
 
 export const Character = () => {
 
-const publicKey = 'c35bd6ac7d24ffa9ab6b91748102fc41';
-const privateKey = 'babd4db99c02ee9a5d1bd653484e3c5a6a29da7b';
-const time = Number(new Date());
-const hash = md5(time + privateKey + publicKey);
-  
 const {id} =useParams() //id da comic que foi selecionada
 
 const [character, setCharacter] = useState()

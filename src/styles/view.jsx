@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import 'animate.css';
 
 export const Div = styled.div`
     background-color: #1e1e23;
@@ -39,6 +40,8 @@ export const Img = styled.div`
     transition: all 0.3s;           
     height: 100%;
     width: 90%;
+    animation: fadeInLeft; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 1s; /* don't forget to set a duration! */
     @media (max-width: 1000px) {
         height: 400px;
         width: 100%;;        

@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import 'animate.css';
 
 export const Nav = styled.nav`
     display: flex;
@@ -63,6 +64,8 @@ export const Img = styled.div`
     align-items: center;
     justify-content: center;
     height: 50%;
+    animation: fadeInLeft; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 1.5s; /* don't forget to set a duration! */
     & img{
         width: 80%;
         height: 75vh;
@@ -90,6 +93,8 @@ export const Article = styled.article`
     align-items: center;
     justify-content: center;
     height: 80%;
+    animation: zoomIn; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 3s; /* don't forget to set a duration! */
     & p{
         color: #fafafa;
         letter-spacing: 0.7px;
