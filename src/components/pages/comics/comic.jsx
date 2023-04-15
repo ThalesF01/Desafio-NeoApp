@@ -3,7 +3,7 @@ import axios from 'axios';
 import Header from '../../main/header'
 import { useParams } from 'react-router-dom';
 import { Div, ContainerView, Img, Title } from '../../../styles/view';
-import { Article } from '../../main/mainStyles';
+import { Article } from '../../../styles/mainStyles';
 import { publicKey, time, hash } from '../../../inf/keys';
 
 export const Comic = () => {

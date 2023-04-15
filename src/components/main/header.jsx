@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from 'react-router-dom'
-import { Nav, Lista, Ul, Link } from "./mainStyles";
+import { Nav, Lista, Ul, Link } from "../../styles/mainStyles";
 
 export default function Header(){
 

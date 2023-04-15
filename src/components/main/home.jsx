@@ -1,6 +1,6 @@
 import react from 'react'
 import Marvel from '../../images/capa-marvel.jpg'
-import { Article, Container, Img, Title } from './mainStyles'
+import { Article, Container, Img, Title } from '../../styles/mainStyles'
 
 export default function Home(){
     return(
