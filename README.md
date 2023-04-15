@@ -4,7 +4,7 @@
 Clone o projeto
 
 ```bash
-  git clone https://github.com/ThalesF01/Desafio-NeoApp.git
+  git clone https://github.com/https://github.com/ThalesF01/Pagina-HQs-Marvel
 ```
 
 Entre no diretório do projeto
