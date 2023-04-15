@@ -4,13 +4,13 @@
 Clone o projeto
 
 ```bash
-  git clone https://github.com/ThalesF01/Desafio-NeoApp.git
+  git clone https://github.com/ThalesF01/Pagina-HQs-Marvel
 ```
 
 Entre no diretório do projeto
 
 ```bash
-  cd Desafio-NeoApp
+  cd Pagina-HQs-Marvel
 ```
 
 Instale as dependências
