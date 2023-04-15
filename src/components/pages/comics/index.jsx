@@ -89,7 +89,12 @@ const [comics, setComics] = useState([])
                   </Container>
                 <Pagination>
                   {Array.from(Array(page), (comics, index)=>{
-                    return <button value={index} onClick={(e) => setCurrentPage(Number(e.target.value))}>
+                    return <button value={index} onClick={(e) => {
+                      window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                      })                      
+                      setCurrentPage(Number(e.target.value))}}>
                               {index+1}
                             </button>
                         })}

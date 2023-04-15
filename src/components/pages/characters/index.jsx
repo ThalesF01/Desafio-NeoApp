@@ -12,7 +12,7 @@ const [characters, setCharacters] = useState([])
     
 useEffect(()=>{
     axios
-    .get(`https://gateway.marvel.com/v1/public/characters?ts=${time}&apikey=${publicKey}&hash=${hash}&limit=30`)
+    .get(`https://gateway.marvel.com/v1/public/characters?ts=${time}&apikey=${publicKey}&hash=${hash}&limit=45`)
     .then(response =>{
         setCharacters(response.data.data.results)
     })
@@ -21,7 +21,7 @@ useEffect(()=>{
 
 let navigate = useNavigate()
 
-const [itensPerPage, setItensPerPage] = useState(6)   //itens por pagina
+const [itensPerPage, setItensPerPage] = useState(9)   //itens por pagina
 const [currentPage, setCurrentPage] = useState(0)     //pagina atual
 
 const page = 5                                        //total de paginas
@@ -49,7 +49,12 @@ const currentItens = characters.slice(startIndex, endIndex)
                             </Container>
                             <Pagination>
                     {Array.from(Array(page), (characters, index)=>{
-                        return <button value={index} onClick={(e) => setCurrentPage(Number(e.target.value))}>
+                        return <button value={index} onClick={(e) => {
+                            window.scrollTo({
+                              top: 0,
+                              behavior: 'smooth'
+                            })
+                            setCurrentPage(Number(e.target.value))}}>
                                     {index+1}
                                 </button>
                         })}
