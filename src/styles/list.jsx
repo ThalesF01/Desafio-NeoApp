@@ -37,7 +37,7 @@ export const ContainerHq = styled.div`
     justify-content: space-evenly;
     background-color: #303038d6;
     width: 90%;
-    margin: 15px;
+    margin: 50px;
     height: 90vh;  
     border-radius:15px; 
     border-width: 2px;

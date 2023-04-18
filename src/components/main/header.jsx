@@ -1,18 +1,28 @@
 import React from "react";
+import { Nav, NavContainer, NavMenu, NavItem, NavLink } from "../../styles/mainStyles";
 import { useNavigate } from 'react-router-dom'
-import { Nav, Lista, Ul, Link } from "../../styles/mainStyles";
 
-export default function Header(){
+const Header = () => {
 
     let navigate = useNavigate() //Rotas
 
-    return(
-        <Nav>
-            <Ul>
-                <Lista> <Link onClick={()=>navigate(`/`)}> Home </Link> </Lista>
-                <Lista> <Link onClick={()=>navigate(`/comics`)}> Comics </Link> </Lista>
-                <Lista> <Link onClick={()=>navigate(`/characters`)}> Characters </Link> </Lista>
-            </Ul>
-        </Nav>
-    )
-}
+  return (
+    <Nav>
+      <NavContainer>        
+        <NavMenu>
+          <NavItem>
+            <NavLink href="#" time="5s" onClick={()=>navigate(`/`)}>Home</NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink href="#projetos" time="5.6s" onClick={()=>navigate(`/comics`)}>Comics</NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink href="#exp" time="6.2s" onClick={()=>navigate(`/characters`)}>Characters</NavLink>
+          </NavItem>                    
+        </NavMenu>
+      </NavContainer>
+    </Nav>
+  );
+};
+
+export default Header;
