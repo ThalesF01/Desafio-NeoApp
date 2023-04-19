@@ -9,6 +9,7 @@ export const Div = styled.div`
     align-items: center;
     justify-content: center;
     width: 100%;    
+    margin-top: 70px;
     transition: all 0.3s;
     @media (min-width: 1000px) {
         height: 100vh;
@@ -23,7 +24,7 @@ export const ContainerView = styled.div`
     border-radius: 15px;
     transition: all 0.3s;
     margin: 40px;
-    height: 100%;
+    height: 85%;
     align-items: center;
     justify-content: space-evenly;
     @media (max-width: 1000px) {
